@@ -198,8 +198,10 @@ section.main {
   width: 100vw;
   height: 600px;
   padding-top: 80px;
-  background-image: url(./../images/mn_bg.png);
-  background-size: contain;
+  background-image: url(./../images/mn_bg2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   background-attachment: fixed;
 }
 
@@ -209,6 +211,9 @@ section.main .mn_container {
   width: 1200px;
   height: 600px;
   margin: 0 auto;
+  background-image: url(./../images/mn_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 section.main .mn_container .mn_slide {
@@ -310,4 +315,54 @@ section.main .mn_container .mn_contact h2:after {
   background-image: url(./../images/withland_logo_w.svg);
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+section.service .sv_container {
+  display: flex;
+  width: 1200px;
+  height: 500px;
+  margin: 130px auto;
+}
+
+section.service .sv_container .sv_title {
+  width: 270px;
+  height: 350px;
+  padding: 50px 30px;
+  background-color: #f3f3f3;
+  box-sizing: border-box;
+  background-image: url(./../images/withland_symbol_gray_line.svg);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: 120px 20px;
+}
+
+section.service .sv_container .sv_title h4 {
+  display: inline-block;
+  color: #00a2b8;
+  line-height: 25px;
+  border-top: 3px solid #00a2b8;
+}
+
+section.service .sv_container .sv_title h2 {
+  margin-top: 15px;
+  color: #222;
+  font-size: 2.5rem;
+  line-height: 35px;
+}
+
+section.service .sv_container .sv_title h2 span {
+  font-weight: 200;
+}
+
+section.service .sv_container .sv_title span.line {
+  display: inline-block;
+  width: 20px;
+  height: 2px;
+  margin: 50px 0 20px;
+  background-color: #222;
+}
+
+section.service .sv_container .sv_title p {
+  font-size: 1.2rem;
+  line-height: 20px;
 }
