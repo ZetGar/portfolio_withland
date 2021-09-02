@@ -333,11 +333,11 @@ section.service .sv_container .sv_title {
   height: 350px;
   padding: 50px 30px;
   background-color: #f3f3f3;
-  box-sizing: border-box;
   background-image: url(./../images/withland_symbol_gray_line.svg);
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: 120px 20px;
+  box-sizing: border-box;
 }
 
 section.service .sv_container .sv_title h4 {
@@ -371,14 +371,70 @@ section.service .sv_container .sv_title p {
   line-height: 20px;
 }
 
+section.logos {
+  width: 100vw;
+  height: 100px;
+  background-color: #ffc98c;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 section.with {
-  height: 500px;
-  background-color: #f2f2f2;
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+  margin: 0 auto;
+  height: 600px;
+}
+
+section.with .wt_container {
+  width: 850px;
+  height: 400px;
+  margin-top: 120px;
+  border: 1px solid #000;
+}
+
+section.with .wt_container div {
+  width: 250px;
+  background-color: #222;
+}
+
+section.with .event {
+  width: 300px;
+  height: 400px;
+  margin-top: 120px;
+  border-top: 2px solid #00a2b8;
+  border-bottom: 2px solid #00a2b8;
+}
+
+section.with .event h3 {
+  color: #00a2b8;
+  font-size: 1.2rem;
+  line-height: 25px;
+  margin-bottom: 10px;
+}
+
+section.with .event span {
+  display: block;
+  width: 300px;
+  height: 300px;
+  background-image: url(./../images/event.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+section.with .event h4 {
+  font-size: 1.5rem;
+  margin: 10px 0 5px;
+}
+
+section.with .event p {
+  font-size: 1.2rem;
+  line-height: 20px;
 }
 
 section.withzine {
   height: 800px;
-  background-color: #fff;
+  background-color: #f2f2f2;
 }
 
 footer {
