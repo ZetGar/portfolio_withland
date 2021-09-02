@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "noto sans CJK KR";
+  color: #222;
+  font-size: 10px;
+  line-height: 1.2;
+  box-sizing: border-box;
+}
+
+body,
+header,
+section,
+article,
+footer,
+nav,
+aside,
+mark,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+a,
+img,
+dl,
+dt,
+dd,
+address,
+code,
+em,
+strong,
+blockquote,
+q {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+q {
+  quotes: none;
+}
+
+em,
+address {
+  font-style: normal;
+}
+
+hr {
+  display: none;
+}
+
+a:link {
+  color: #222;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #222;
+}
+
+a:active {
+  color: #222;
+}
+
+header {
+  width: 100vw;
+  height: 70px;
+  background-color: #fff;
+}
+
+header .hd_container {
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+  margin: 0 auto;
+  line-height: 70px;
+}
+
+header .hd_container nav {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: 10px 0;
+}
+
+header .hd_container nav a.hamber {
+  width: 40px;
+  height: 40px;
+}
+
+header .hd_container nav a.hamber span {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #777;
+  border-radius: 7px;
+}
+
+header .hd_container nav a.hamber span:before {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin-top: -8px;
+  background-color: #777;
+  border-radius: 7px;
+}
+
+header .hd_container nav a.hamber span:after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin-top: 13px;
+  background-color: #777;
+  border-radius: 7px;
+}
+
+header .hd_container nav ol.gnb {
+  width: 50px;
+  height: 100vh;
+  background-color: #fff;
+}
+
+header .hd_container nav ol.gnb li a {
+  display: block;
+}
+
+header .hd_container h1.logo {
+  width: 200px;
+}
+
+header .hd_container h1.logo a {
+  display: block;
+  height: 50px;
+  margin: 10px 0;
+  background-color: #000;
+  text-indent: -9999px;
+}
+
+header .hd_container a.my {
+  height: 70px;
+  color: #777;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  vertical-align: middle;
+  transition: 0.7s;
+}
+
+header .hd_container a.my i {
+  font-size: 1.7rem;
+}
+
+header .hd_container a.my:hover {
+  color: #333;
+}
+
+section.main {
+  position: relative;
+  width: 100vw;
+  height: 500px;
+  background-image: url(./../images/mn_bg.png);
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+section.main .mn_container {
+  overflow: hidden;
+  width: 1200px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+section.main .mn_container > .mn_slide {
+  display: flex;
+  width: calc(1200px * 5);
+  margin: 0 auto;
+  background-position: center 0;
+  background-size: contain;
+}
+
+section.main .mn_container > .mn_slide > li {
+  width: 1200px;
+  background-repeat: no-repeat;
+  background-position: 80% bottom;
+}
+
+section.main .mn_container > .mn_slide > li a {
+  display: block;
+  width: 100%;
+  height: 500px;
+  text-indent: -9999px;
+}
+
+section.main .mn_container > .mn_slide > li:nth-of-type(1) {
+  background-image: url(./../images/mn_dog1.png);
+  background-size: 23%;
+}
+
+section.main .mn_container > .mn_slide > li:nth-of-type(2) {
+  background-image: url(./../images/mn_dog2.png);
+  background-size: 25%;
+}
+
+section.main .mn_container > .mn_slide > li:nth-of-type(3) {
+  background-image: url(./../images/mn_dog3.png);
+  background-size: 30%;
+}
+
+section.main .mn_container > .mn_slide > li:nth-of-type(4) {
+  background-image: url(./../images/mn_dog4.png);
+  background-size: 25%;
+}
+
+section.main .mn_container > .mn_slide > li:nth-of-type(5) {
+  background-image: url(./../images/mn_dog5.png);
+  background-size: 32%;
+}
+
+section.main .mn_container .mn_contact {
+  position: absolute;
+  top: calc(50% - 180px);
+  left: calc(50% - 400px);
+}
+
+section.main .mn_container .mn_contact h2 {
+  color: #fff;
+  font-size: 6.5rem;
+  font-weight: 200;
+}
+
+section.main .mn_container .mn_contact h2 span {
+  font-weight: 800;
+}
+
+section.main .mn_container .mn_contact h2:after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 50px;
+  margin-top: 25px;
+  background-color: #222;
+}
