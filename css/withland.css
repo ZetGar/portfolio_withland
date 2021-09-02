@@ -77,9 +77,16 @@ a:active {
   color: #222;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 header {
+  position: fixed;
+  z-index: 9999;
   width: 100vw;
   height: 70px;
+  padding-top: 20px;
   background-color: #fff;
 }
 
@@ -135,13 +142,23 @@ header .hd_container nav a.hamber span:after {
 }
 
 header .hd_container nav ol.gnb {
-  width: 50px;
-  height: 100vh;
+  display: none;
+  width: 200px;
+  margin-top: 60px;
   background-color: #fff;
 }
 
 header .hd_container nav ol.gnb li a {
   display: block;
+  font-size: 1.3rem;
+  line-height: 50px;
+  padding: 0 20px;
+}
+
+header .hd_container nav ol.gnb li:hover > a {
+  color: #fff;
+  font-weight: 800;
+  background-color: #00a2b8;
 }
 
 header .hd_container h1.logo {
@@ -152,8 +169,11 @@ header .hd_container h1.logo a {
   display: block;
   height: 50px;
   margin: 10px 0;
-  background-color: #000;
   text-indent: -9999px;
+  background-image: url(./../images/withland_logo.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 header .hd_container a.my {
@@ -176,7 +196,8 @@ header .hd_container a.my:hover {
 section.main {
   position: relative;
   width: 100vw;
-  height: 500px;
+  height: 600px;
+  padding-top: 80px;
   background-image: url(./../images/mn_bg.png);
   background-size: contain;
   background-attachment: fixed;
@@ -184,12 +205,15 @@ section.main {
 
 section.main .mn_container {
   overflow: hidden;
+  position: relative;
   width: 1200px;
-  height: 500px;
+  height: 600px;
   margin: 0 auto;
 }
 
-section.main .mn_container > .mn_slide {
+section.main .mn_container .mn_slide {
+  position: absolute;
+  left: 0;
   display: flex;
   width: calc(1200px * 5);
   margin: 0 auto;
@@ -197,42 +221,68 @@ section.main .mn_container > .mn_slide {
   background-size: contain;
 }
 
-section.main .mn_container > .mn_slide > li {
+section.main .mn_container .mn_slide > li {
   width: 1200px;
   background-repeat: no-repeat;
   background-position: 80% bottom;
 }
 
-section.main .mn_container > .mn_slide > li a {
+section.main .mn_container .mn_slide > li a {
   display: block;
   width: 100%;
-  height: 500px;
+  height: 600px;
   text-indent: -9999px;
 }
 
-section.main .mn_container > .mn_slide > li:nth-of-type(1) {
+section.main .mn_container .mn_slide > li:nth-of-type(1) {
   background-image: url(./../images/mn_dog1.png);
-  background-size: 23%;
+  background-size: 28%;
 }
 
-section.main .mn_container > .mn_slide > li:nth-of-type(2) {
+section.main .mn_container .mn_slide > li:nth-of-type(2) {
   background-image: url(./../images/mn_dog2.png);
-  background-size: 25%;
+  background-size: 38%;
 }
 
-section.main .mn_container > .mn_slide > li:nth-of-type(3) {
+section.main .mn_container .mn_slide > li:nth-of-type(3) {
   background-image: url(./../images/mn_dog3.png);
-  background-size: 30%;
+  background-size: 43%;
 }
 
-section.main .mn_container > .mn_slide > li:nth-of-type(4) {
+section.main .mn_container .mn_slide > li:nth-of-type(4) {
   background-image: url(./../images/mn_dog4.png);
-  background-size: 25%;
+  background-size: 35%;
 }
 
-section.main .mn_container > .mn_slide > li:nth-of-type(5) {
+section.main .mn_container .mn_slide > li:nth-of-type(5) {
   background-image: url(./../images/mn_dog5.png);
-  background-size: 32%;
+  background-size: 47%;
+}
+
+section.main .mn_container .mn_pagination {
+  position: absolute;
+  left: calc(50% - 400px);
+  bottom: 80px;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+  height: 13px;
+}
+
+section.main .mn_container .mn_pagination li a {
+  display: block;
+  width: 13px;
+  height: 13px;
+  text-indent: -9999px;
+  border-radius: 50%;
+  border: 2px solid #ffc98c;
+  box-sizing: border-box;
+}
+
+section.main .mn_container .mn_pagination li:hover > a,
+section.main .mn_container .mn_pagination li.on > a {
+  background-color: #ffc98c;
 }
 
 section.main .mn_container .mn_contact {
@@ -256,6 +306,8 @@ section.main .mn_container .mn_contact h2:after {
   display: block;
   width: 150px;
   height: 50px;
-  margin-top: 25px;
-  background-color: #222;
+  margin-top: 30px;
+  background-image: url(./../images/withland_logo_w.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
