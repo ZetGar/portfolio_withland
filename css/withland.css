@@ -324,6 +324,10 @@ section.service .sv_container {
   margin: 130px auto;
 }
 
+section.service .sv_container:hover .sv_title {
+  background-image: url(./../images/withland_symbol_gray.svg);
+}
+
 section.service .sv_container .sv_title {
   width: 270px;
   height: 350px;
@@ -379,5 +383,104 @@ section.withzine {
 
 footer {
   height: 300px;
-  background-color: #222;
+  background-color: #00a2b8;
+}
+
+footer .ft_container {
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+  padding: 50px;
+  margin: 0 auto;
+}
+
+footer .ft_container h2.logo {
+  width: 15%;
+  height: 80px;
+  text-indent: -9999px;
+  background-image: url(./../images/withland_logo_w.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+footer .ft_container .ft_contact {
+  width: 30%;
+}
+
+footer .ft_container .ft_contact .ft_fir {
+  color: #fff;
+}
+
+footer .ft_container .ft_contact .ft_fir span {
+  padding: 0 10px;
+  line-height: 30px;
+  font-size: 1.1rem;
+  border-right: 1px solid #fff;
+}
+
+footer .ft_container .ft_contact .ft_fir span a {
+  color: #fff;
+}
+
+footer .ft_container .ft_contact .ft_fir span a:hover {
+  text-decoration: underline;
+}
+
+footer .ft_container .ft_contact .ft_fir span:last-of-type {
+  border-right: none;
+}
+
+footer .ft_container .ft_contact .ft_fir address {
+  font-size: 1.3rem;
+}
+
+footer .ft_container .ft_contact .ft_fir address span {
+  border-right: none;
+}
+
+footer .ft_container .ft_contact .ft_fir address:nth-of-type(2) {
+  padding: 10px 0 0 10px;
+  margin-top: 5px;
+  font-weight: 800;
+  font-size: 1.2rem;
+  border-top: 1px solid #fff;
+}
+
+footer .ft_container .ft_contact .ft_fir p {
+  font-size: 1.3rem;
+}
+
+footer .ft_container .ft_contact .ft_fir p span {
+  border-right: none;
+}
+
+footer .ft_container .ft_sec {
+  width: 20%;
+}
+
+footer .ft_container .ft_sec h4 {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+footer .ft_container .ft_tir {
+  width: 20%;
+}
+
+footer .ft_container .ft_tir h4 {
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+footer .ft_container .ft_tir h4:nth-of-type(2) {
+  margin-top: 30px;
+}
+
+footer .ft_container .ft_tir p a {
+  display: block;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 800;
 }
