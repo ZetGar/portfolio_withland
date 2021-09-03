@@ -411,7 +411,7 @@ section.service .sv_container .sv_card:hover .content {
   visibility: visible;
   opacity: 1;
   margin-top: -55px;
-  transition-delay: 0.1s;
+  transition-delay: 0.25s;
 }
 
 section.service .sv_container .sv_card .sv_imBx {
