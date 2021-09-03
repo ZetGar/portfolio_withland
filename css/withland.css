@@ -319,6 +319,7 @@ section.main .mn_container .mn_contact h2:after {
 
 section.service .sv_container {
   display: flex;
+  justify-content: space-between;
   width: 1200px;
   height: 350px;
   margin: 130px auto;
@@ -369,6 +370,77 @@ section.service .sv_container .sv_title span.line {
 section.service .sv_container .sv_title p {
   font-size: 1.2rem;
   line-height: 20px;
+}
+
+section.service .sv_container .sv_card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 270px;
+  height: 230px;
+  margin: 30px 10px;
+  padding: 30px 15px;
+  border-radius: 4px;
+  background-color: #fff;
+  box-sizing: border-box;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out;
+}
+
+section.service .sv_container .sv_card:nth-of-type(2) .sv_imBx {
+  background-image: url(./../images/card_1.png);
+}
+
+section.service .sv_container .sv_card:nth-of-type(3) .sv_imBx {
+  background-image: url(./../images/card_2.png);
+}
+
+section.service .sv_container .sv_card:nth-of-type(4) .sv_imBx {
+  background-image: url(./../images/card_3.png);
+}
+
+section.service .sv_container .sv_card:hover {
+  height: 320px;
+}
+
+section.service .sv_container .sv_card:hover .content {
+  visibility: visible;
+  opacity: 1;
+  margin-top: -55px;
+  transition-delay: 0.1s;
+}
+
+section.service .sv_container .sv_card .sv_imBx {
+  position: relative;
+  top: -60px;
+  left: 0;
+  z-index: 100;
+  min-width: 240px;
+  min-height: 240px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+}
+
+section.service .sv_container .sv_card .content {
+  position: relative;
+  margin-top: -140px;
+  padding: 10px 15px;
+  text-align: center;
+  color: #222;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+section.service .sv_container .sv_card .content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+section.service .sv_container .sv_card .content p {
+  font-size: 1.1rem;
+  line-height: 15px;
 }
 
 section.logos {
