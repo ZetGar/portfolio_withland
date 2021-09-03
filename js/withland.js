@@ -23,6 +23,7 @@ $(function(){
     moveFn();
   });
 
+
     // 스튜디오
     const $btnslide = $('.bu_container>li');
     const fadeFn = function(){
@@ -51,6 +52,20 @@ $(function(){
     },2000);
   });
 
+  // 로고슬라이드
+  const $logo=$('.lg_slidecontainer');
+
+  const logoFn = function(){
+    $logo.animate({left:-200},5000,function(){
+      $logo.children('li').eq(0).appendTo($logo);
+      $logo.css({left: 0})
+    });
+  }
+  $(window).on('load', function(){
+    logoFn();
+    setInterval(logoFn,5010);
+
+  });
 
   
 

@@ -342,6 +342,9 @@ section.service {
 
       &:hover {
         height: 320px;
+        .sv_imBx {
+          top: -60px;
+        }
         .content {
           visibility: visible;
           opacity: 1;
@@ -352,7 +355,7 @@ section.service {
 
       .sv_imBx {
         position: relative;
-        top: -60px;
+        top: 0px;
         left: 0;
         z-index: 100;
         min-width: 240px;
@@ -362,6 +365,7 @@ section.service {
         background-position: center;
 
         border-radius: 4px;
+        transition: 0.3s ease-in-out;
       }
 
       .content {
@@ -388,10 +392,82 @@ section.service {
 }
 
 section.logos {
+  position: relative;
   width: 100vw;
   height: 100px;
   background-color: #ffc98c;
   // box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+
+  .lg_container {
+    overflow: hidden;
+    position: relative;
+
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+
+    .lg_slidecontainer {
+      display: flex;
+      position: absolute;
+      left: 0;
+      width: calc(200 * 7);
+      height: 100px;
+
+      li {
+        a {
+          display: block;
+          width: 200px;
+          height: 100px;
+          text-indent: -9999px;
+
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+        &.lg_1 {
+          a {
+            background-image: url(./../images/logo_1.png);
+            background-size: 70%;
+          }
+        }
+        &.lg_2 {
+          a {
+            background-image: url(./../images/logo_2.png);
+            background-size: 50%;
+          }
+        }
+        &.lg_3 {
+          a {
+            background-image: url(./../images/logo_3.png);
+          }
+        }
+        &.lg_4 {
+          a {
+            background-image: url(./../images/logo_4.png);
+            background-size: 50%;
+          }
+        }
+        &.lg_5 {
+          a {
+            background-image: url(./../images/logo_5.png);
+            background-size: 50%;
+          }
+        }
+        &.lg_6 {
+          a {
+            background-image: url(./../images/logo_6.png);
+            background-size: 50%;
+          }
+        }
+        &.lg_7 {
+          a {
+            background-image: url(./../images/logo_7.png);
+            background-size: 50%;
+          }
+        }
+      }
+    }
+  }
 }
 
 section.with {
@@ -862,9 +938,36 @@ footer {
     }
     .ft_sec {
       width: 20%;
+      padding-left: 50px;
       h4 {
         color: #fff;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+        font-weight: 400;
+      }
+      span {
+        display: inline-block;
+        margin-right: 20px;
+        color: #fff;
+        font-size: 1.3rem;
+        line-height: 25px;
+
+        &:nth-of-type(1) {
+          margin-right: 22px;
+          margin-top: 8px;
+        }
+        &:nth-of-type(3) {
+          margin-right: 28px;
+        }
+        &:nth-of-type(5) {
+          margin-right: 21px;
+        }
+        &:nth-of-type(7) {
+          margin-right: 44px;
+        }
+        &.time {
+          font-size: 1.1rem;
+          font-weight: 800;
+        }
       }
     }
 

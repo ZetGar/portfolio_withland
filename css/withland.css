@@ -403,6 +403,10 @@ section.service .sv_container .sv_card:hover {
   height: 320px;
 }
 
+section.service .sv_container .sv_card:hover .sv_imBx {
+  top: -60px;
+}
+
 section.service .sv_container .sv_card:hover .content {
   visibility: visible;
   opacity: 1;
@@ -412,7 +416,7 @@ section.service .sv_container .sv_card:hover .content {
 
 section.service .sv_container .sv_card .sv_imBx {
   position: relative;
-  top: -60px;
+  top: 0px;
   left: 0;
   z-index: 100;
   min-width: 240px;
@@ -420,6 +424,7 @@ section.service .sv_container .sv_card .sv_imBx {
   background-size: cover;
   background-position: center;
   border-radius: 4px;
+  transition: 0.3s ease-in-out;
 }
 
 section.service .sv_container .sv_card .content {
@@ -444,9 +449,70 @@ section.service .sv_container .sv_card .content p {
 }
 
 section.logos {
+  position: relative;
   width: 100vw;
   height: 100px;
   background-color: #ffc98c;
+}
+
+section.logos .lg_container {
+  overflow: hidden;
+  position: relative;
+  width: 1200px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+section.logos .lg_container .lg_slidecontainer {
+  display: flex;
+  position: absolute;
+  left: 0;
+  width: calc(200 * 7);
+  height: 100px;
+}
+
+section.logos .lg_container .lg_slidecontainer li a {
+  display: block;
+  width: 200px;
+  height: 100px;
+  text-indent: -9999px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+section.logos .lg_container .lg_slidecontainer li.lg_1 a {
+  background-image: url(./../images/logo_1.png);
+  background-size: 70%;
+}
+
+section.logos .lg_container .lg_slidecontainer li.lg_2 a {
+  background-image: url(./../images/logo_2.png);
+  background-size: 50%;
+}
+
+section.logos .lg_container .lg_slidecontainer li.lg_3 a {
+  background-image: url(./../images/logo_3.png);
+}
+
+section.logos .lg_container .lg_slidecontainer li.lg_4 a {
+  background-image: url(./../images/logo_4.png);
+  background-size: 50%;
+}
+
+section.logos .lg_container .lg_slidecontainer li.lg_5 a {
+  background-image: url(./../images/logo_5.png);
+  background-size: 50%;
+}
+
+section.logos .lg_container .lg_slidecontainer li.lg_6 a {
+  background-image: url(./../images/logo_6.png);
+  background-size: 50%;
+}
+
+section.logos .lg_container .lg_slidecontainer li.lg_7 a {
+  background-image: url(./../images/logo_7.png);
+  background-size: 50%;
 }
 
 section.with {
@@ -922,11 +988,43 @@ footer .ft_container .ft_contact .ft_fir p span {
 
 footer .ft_container .ft_sec {
   width: 20%;
+  padding-left: 50px;
 }
 
 footer .ft_container .ft_sec h4 {
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+footer .ft_container .ft_sec span {
+  display: inline-block;
+  margin-right: 20px;
+  color: #fff;
+  font-size: 1.3rem;
+  line-height: 25px;
+}
+
+footer .ft_container .ft_sec span:nth-of-type(1) {
+  margin-right: 22px;
+  margin-top: 8px;
+}
+
+footer .ft_container .ft_sec span:nth-of-type(3) {
+  margin-right: 28px;
+}
+
+footer .ft_container .ft_sec span:nth-of-type(5) {
+  margin-right: 21px;
+}
+
+footer .ft_container .ft_sec span:nth-of-type(7) {
+  margin-right: 44px;
+}
+
+footer .ft_container .ft_sec span.time {
+  font-size: 1.1rem;
+  font-weight: 800;
 }
 
 footer .ft_container .ft_tir {
