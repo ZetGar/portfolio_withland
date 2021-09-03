@@ -27,7 +27,7 @@ $(function(){
     const $btnslide = $('.bu_container>li');
     const fadeFn = function(){
   
-      $btnslide.stop().fadeOut(1000).removeClass('on');
+      $btnslide.stop().fadeOut(2000).removeClass('on');
       $btnslide.eq(nowIdx).stop().fadeIn(2000).addClass('on');
   
       $btnslide.eq(nowIdx).addClass('on').siblings().removeClass('on');
