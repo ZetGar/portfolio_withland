@@ -390,12 +390,92 @@ section.with .wt_container {
   width: 850px;
   height: 400px;
   margin-top: 120px;
-  border: 1px solid #000;
+  border-top: 2px solid #00a2b8;
+  border-bottom: 2px solid #00a2b8;
 }
 
-section.with .wt_container div {
-  width: 250px;
-  background-color: #222;
+section.with .wt_container h3 {
+  color: #00a2b8;
+  font-size: 1.2rem;
+  line-height: 25px;
+  margin-bottom: 10px;
+}
+
+section.with .wt_container .wt_slide {
+  display: flex;
+  justify-content: space-between;
+  width: calc(283.3px * 3);
+  height: 350px;
+  margin: 0 auto;
+}
+
+section.with .wt_container .wt_slide li {
+  overflow: hidden;
+  position: relative;
+  width: 283.3px;
+  height: 350px;
+  transition: 0.6s;
+}
+
+section.with .wt_container .wt_slide li:hover {
+  width: 600px;
+}
+
+section.with .wt_container .wt_slide li:hover div.wt_bla {
+  animation: textup 0.6s forwards;
+}
+
+section.with .wt_container .wt_slide li:nth-of-type(1) div {
+  background-image: url(./../images/wt_slide1.png);
+  border-right: 3px solid #fff;
+}
+
+section.with .wt_container .wt_slide li:nth-of-type(2) div {
+  background-image: url(./../images/wt_slide2.png);
+  border-right: 3px solid #fff;
+}
+
+section.with .wt_container .wt_slide li:nth-of-type(3) div {
+  background-image: url(./../images/wt_slide3.png);
+}
+
+section.with .wt_container .wt_slide div {
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+}
+
+section.with .wt_container .wt_slide div div.wt_bla {
+  position: absolute;
+  bottom: -160px;
+  z-index: 100;
+  width: 100%;
+  height: 130px;
+  padding: 30px;
+  background-image: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+section.with .wt_container .wt_slide div div.wt_bla h3 {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+section.with .wt_container .wt_slide div div.wt_bla p {
+  color: #fff;
+  padding-right: 70px;
+  font-size: 1.2rem;
+  line-height: 20px;
+}
+
+@keyframes textup {
+  0% {
+    bottom: -160px;
+  }
+  100% {
+    bottom: 0px;
+  }
 }
 
 section.with .event {
