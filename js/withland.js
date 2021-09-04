@@ -1,4 +1,21 @@
 $(function(){
+  // gnb 햄버거 메뉴 보이기
+  const $hamber = $('.hamber');
+  const $gnb = $('.gnb');
+
+  $hamber.on('mouseover', function(evt){
+    evt.preventDefault();
+    $gnb.stop().slideDown();
+  });
+
+  $gnb.on('mouseleave', function(evt){
+    evt.preventDefault();
+    $gnb.stop().slideUp();
+  });
+
+
+
+  
 
   // 메인슬라이드
   const $slide = $('.mn_slide');
