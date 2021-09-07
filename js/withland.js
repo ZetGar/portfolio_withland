@@ -3,17 +3,17 @@ $(function(){
   const $hamber = $('.hamber');
   const $gnb = $('.gnb');
 
-  $hamber.on('mouseover', function(evt){
+  $hamber.on('click', function(evt){
     evt.preventDefault();
+
+    $(this).toggleClass('on');
+
+    if($(this).hasClass('on')){
     $gnb.stop().slideDown();
+    }else{
+      $gnb.stop().slideUp();
+    }
   });
-
-  $gnb.on('mouseleave', function(evt){
-    evt.preventDefault();
-    $gnb.stop().slideUp();
-  });
-
-
 
   
 
