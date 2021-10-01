@@ -96,6 +96,13 @@ header .hd_container {
   width: 1200px;
   margin: 0 auto;
   line-height: 70px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 992px) {
+  header .hd_container {
+    width: 100%;
+  }
 }
 
 header .hd_container nav {
@@ -108,6 +115,13 @@ header .hd_container nav a.hamber {
   display: block;
   width: 50px;
   height: 70px;
+}
+
+@media screen and (max-width: 992px) {
+  header .hd_container nav a.hamber {
+    position: absolute;
+    right: 0;
+  }
 }
 
 header .hd_container nav a.hamber span {
@@ -148,6 +162,14 @@ header .hd_container nav ol.gnb {
   background-color: #fff;
 }
 
+@media screen and (max-width: 992px) {
+  header .hd_container nav ol.gnb {
+    position: absolute;
+    top: 90px;
+    right: 0;
+  }
+}
+
 header .hd_container nav ol.gnb li a {
   display: block;
   height: 50px;
@@ -169,6 +191,13 @@ header .hd_container nav ol.gnb li:last-of-type a {
 
 header .hd_container h1.logo {
   width: 200px;
+}
+
+@media screen and (max-width: 992px) {
+  header .hd_container h1.logo {
+    position: absolute;
+    left: 0;
+  }
 }
 
 header .hd_container h1.logo a {
@@ -193,6 +222,13 @@ header .hd_container a.my {
 
 header .hd_container a.my i {
   font-size: 1.7rem;
+}
+
+@media screen and (max-width: 992px) {
+  header .hd_container a.my {
+    position: absolute;
+    right: 70px;
+  }
 }
 
 header .hd_container a.my:hover {
@@ -220,6 +256,13 @@ section.main .mn_container {
   background-image: url(./../images/mn_bg.png);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@media screen and (max-width: 768px) {
+  section.main .mn_container {
+    width: 100%;
+  }
 }
 
 section.main .mn_container .mn_slide {
@@ -270,6 +313,32 @@ section.main .mn_container .mn_slide > li:nth-of-type(5) {
   background-size: 47%;
 }
 
+@media screen and (max-width: 768px) {
+  section.main .mn_container .mn_slide li {
+    width: 100%;
+  }
+  section.main .mn_container .mn_slide li:nth-of-type(1) {
+    background-size: 22%;
+    background-position: 230px 250px;
+  }
+  section.main .mn_container .mn_slide li:nth-of-type(2) {
+    background-size: 30%;
+    background-position: 180px 300px;
+  }
+  section.main .mn_container .mn_slide li:nth-of-type(3) {
+    background-size: 30%;
+    background-position: 180px 200px;
+  }
+  section.main .mn_container .mn_slide li:nth-of-type(4) {
+    background-size: 25%;
+    background-position: 180px 300px;
+  }
+  section.main .mn_container .mn_slide li:nth-of-type(5) {
+    background-size: 35%;
+    background-position: 180px 300px;
+  }
+}
+
 section.main .mn_container .mn_pagination {
   position: absolute;
   left: calc(50% - 400px);
@@ -279,6 +348,13 @@ section.main .mn_container .mn_pagination {
   justify-content: space-between;
   width: 100px;
   height: 13px;
+}
+
+@media screen and (max-width: 768px) {
+  section.main .mn_container .mn_pagination {
+    left: calc(50% - 5%);
+    bottom: 30px;
+  }
 }
 
 section.main .mn_container .mn_pagination li a {
@@ -296,16 +372,45 @@ section.main .mn_container .mn_pagination li.on > a {
   background-color: #ffc98c;
 }
 
+@media screen and (max-width: 768px) {
+  section.main .mn_container .mn_pagination li a {
+    border: 2px solid #00a2b8;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section.main .mn_container .mn_pagination li:hover > a,
+  section.main .mn_container .mn_pagination li.on > a {
+    background-color: #00a2b8;
+  }
+}
+
 section.main .mn_container .mn_contact {
   position: absolute;
   top: calc(50% - 180px);
   left: calc(50% - 400px);
 }
 
+@media screen and (max-width: 768px) {
+  section.main .mn_container .mn_contact {
+    position: initial;
+    width: 100%;
+  }
+}
+
 section.main .mn_container .mn_contact h2 {
   color: #fff;
   font-size: 6.5rem;
   font-weight: 200;
+}
+
+@media screen and (max-width: 768px) {
+  section.main .mn_container .mn_contact h2 {
+    width: 50%;
+    margin: 50px auto 0;
+    font-size: 4rem;
+    text-align: center;
+  }
 }
 
 section.main .mn_container .mn_contact h2 span {
@@ -323,12 +428,27 @@ section.main .mn_container .mn_contact h2:after {
   background-repeat: no-repeat;
 }
 
+@media screen and (max-width: 768px) {
+  section.main .mn_container .mn_contact h2:after {
+    margin: 30px auto 0;
+  }
+}
+
 section.service .sv_container {
   display: flex;
   justify-content: space-between;
   width: 1200px;
   height: 350px;
   margin: 130px auto;
+}
+
+@media screen and (max-width: 768px) {
+  section.service .sv_container {
+    flex-wrap: wrap;
+    width: 95%;
+    height: 700px;
+    margin: 20px auto;
+  }
 }
 
 section.service .sv_container:hover .sv_title {
@@ -376,6 +496,26 @@ section.service .sv_container .sv_title span.line {
 section.service .sv_container .sv_title p {
   font-size: 1.2rem;
   line-height: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  section.service .sv_container .sv_title {
+    width: 270px;
+    height: 280px;
+    margin: 20px auto;
+  }
+  section.service .sv_container .sv_title h4 {
+    margin-top: 0;
+  }
+  section.service .sv_container .sv_title h2 {
+    margin-top: 10px;
+  }
+  section.service .sv_container .sv_title span.line {
+    margin: 30px 0 10px;
+  }
+  section.service .sv_container .sv_title p {
+    line-height: 17px;
+  }
 }
 
 section.service .sv_container .sv_card {
@@ -529,12 +669,38 @@ section.with {
   height: 580px;
 }
 
+@media screen and (max-width: 768px) {
+  section.with {
+    display: block;
+    width: 100%;
+    height: 800px;
+  }
+  section.with .wt_container {
+    width: 100vw;
+  }
+  section.with .wt_container h3 {
+    text-align: center;
+  }
+  section.with .wt_container .wt_slide {
+    width: calc(100% / 3);
+  }
+  section.with .wt_container .wt_slide li {
+    width: 33.3%;
+  }
+}
+
 section.with .wt_container {
   width: 850px;
   height: 400px;
   margin-top: 120px;
   border-top: 2px solid #00a2b8;
   border-bottom: 2px solid #00a2b8;
+}
+
+@media screen and (max-width: 768px) {
+  section.with .wt_container {
+    width: 100%;
+  }
 }
 
 section.with .wt_container h3 {
@@ -552,12 +718,24 @@ section.with .wt_container .wt_slide {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 768px) {
+  section.with .wt_container .wt_slide {
+    width: 100%;
+  }
+}
+
 section.with .wt_container .wt_slide li {
   overflow: hidden;
   position: relative;
   width: 283.3px;
   height: 350px;
   transition: 0.6s;
+}
+
+@media screen and (max-width: 768px) {
+  section.with .wt_container .wt_slide li {
+    width: calc(100% / 3);
+  }
 }
 
 section.with .wt_container .wt_slide li:hover {
@@ -605,6 +783,12 @@ section.with .wt_container .wt_slide div div.wt_bla h3 {
   font-weight: 800;
 }
 
+@media screen and (max-width: 768px) {
+  section.with .wt_container .wt_slide div div.wt_bla h3 {
+    text-align: left;
+  }
+}
+
 section.with .wt_container .wt_slide div div.wt_bla p {
   color: #fff;
   padding-right: 70px;
@@ -629,11 +813,23 @@ section.with .event {
   border-bottom: 2px solid #00a2b8;
 }
 
+@media screen and (max-width: 768px) {
+  section.with .event {
+    margin-left: 40px;
+  }
+}
+
 section.with .event h3 {
   color: #00a2b8;
   font-size: 1.2rem;
   line-height: 25px;
   margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  section.with .event h3 {
+    text-align: center;
+  }
 }
 
 section.with .event a {
@@ -656,10 +852,22 @@ section.with .event h4 {
   margin: 10px 0 5px;
 }
 
+@media screen and (max-width: 768px) {
+  section.with .event h4 {
+    text-align: center;
+  }
+}
+
 section.with .event p {
   color: #555;
   font-size: 1rem;
   line-height: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  section.with .event p {
+    text-align: center;
+  }
 }
 
 section.withzine {
@@ -670,10 +878,25 @@ section.withzine {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 768px) {
+  section.withzine {
+    position: relative;
+    width: 100%;
+  }
+}
+
 section.withzine .beauty {
   width: 300px;
   height: 400px;
   border: 1px solid #555;
+}
+
+@media screen and (max-width: 768px) {
+  section.withzine .beauty {
+    position: relative;
+    top: -275px;
+    left: 370px;
+  }
 }
 
 section.withzine .beauty h3 {
@@ -742,11 +965,25 @@ section.withzine .zine {
   box-sizing: border-box;
 }
 
+@media screen and (max-width: 768px) {
+  section.withzine .zine {
+    position: absolute;
+    top: 250px;
+    width: 100%;
+  }
+}
+
 section.withzine .zine h3 {
   padding-top: 10px;
   color: #00a2b8;
   font-size: 1.2rem;
   line-height: 25px;
+}
+
+@media screen and (max-width: 768px) {
+  section.withzine .zine h3 {
+    text-indent: 20px;
+  }
 }
 
 section.withzine .zine a.newsbtn {
@@ -829,8 +1066,28 @@ section.withzine .zine .wt_zine {
   box-sizing: border-box;
 }
 
+@media screen and (max-width: 768px) {
+  section.withzine .zine .wt_zine {
+    width: 100%;
+  }
+}
+
 section.withzine .zine .wt_zine ul {
   width: 15%;
+}
+
+@media screen and (max-width: 768px) {
+  section.withzine .zine .wt_zine ul {
+    position: absolute;
+    top: 0;
+    left: 130px;
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+  }
+  section.withzine .zine .wt_zine ul li > a {
+    text-align: center;
+  }
 }
 
 section.withzine .zine .wt_zine ul li {
@@ -859,6 +1116,13 @@ section.withzine .zine .wt_zine ol {
   width: 80%;
   background-color: rgba(255, 255, 255, 0.5);
   border: 1px solid #000;
+}
+
+@media screen and (max-width: 768px) {
+  section.withzine .zine .wt_zine ol {
+    width: 100%;
+    border: none;
+  }
 }
 
 section.withzine .zine .wt_zine ol li {
@@ -904,6 +1168,13 @@ section.withzine .zine .wt_zine ol li h3 {
   font-weight: 200;
 }
 
+@media screen and (max-width: 768px) {
+  section.withzine .zine .wt_zine ol li h3 {
+    text-indent: 0;
+    text-align-last: left;
+  }
+}
+
 section.withzine .zine .wt_zine ol li h4 {
   margin-top: 15px;
   color: #00a2b8;
@@ -922,6 +1193,12 @@ section.withzine .zine .wt_zine ol li p {
 
 footer {
   background-color: #00a2b8;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    margin-top: 230px;
+  }
 }
 
 footer .ft_container {

@@ -6,6 +6,7 @@ $mobile: "screen and (max-width:768px)";
 body {
   overflow-x: hidden;
 }
+
 header {
   position: fixed;
   z-index: 9999;
@@ -22,6 +23,11 @@ header {
     margin: 0 auto;
 
     line-height: 70px;
+    box-sizing: border-box;
+
+    @media #{$tablet} {
+      width: 100%;
+    }
 
     nav {
       width: 200px;
@@ -32,6 +38,11 @@ header {
         display: block;
         width: 50px;
         height: 70px;
+
+        @media #{$tablet} {
+          position: absolute;
+          right: 0;
+        }
 
         span {
           position: absolute;
@@ -71,6 +82,12 @@ header {
         height: 203px;
         background-color: #fff;
 
+        @media #{$tablet} {
+          position: absolute;
+          top: 90px;
+          right: 0;
+        }
+
         li {
           a {
             display: block;
@@ -98,6 +115,11 @@ header {
 
     h1.logo {
       width: 200px;
+
+      @media #{$tablet} {
+        position: absolute;
+        left: 0;
+      }
       a {
         display: block;
         height: 50px;
@@ -121,6 +143,11 @@ header {
       letter-spacing: 2px;
       vertical-align: middle;
       transition: 0.7s;
+
+      @media #{$tablet} {
+        position: absolute;
+        right: 70px;
+      }
 
       &:hover {
         color: #333;
@@ -150,6 +177,11 @@ section.main {
     background-image: url(./../images/mn_bg.png);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
+
+    @media #{$mobile} {
+      width: 100%;
+    }
 
     .mn_slide {
       position: absolute;
@@ -174,6 +206,7 @@ section.main {
           height: 600px;
           text-indent: -9999px;
         }
+
         &:nth-of-type(1) {
           background-image: url(./../images/mn_dog1.png);
           background-size: 28%;
@@ -195,6 +228,33 @@ section.main {
           background-size: 47%;
         }
       }
+
+      @media #{$mobile} {
+        li {
+          width: 100%;
+
+          &:nth-of-type(1) {
+            background-size: 22%;
+            background-position: 230px 250px;
+          }
+          &:nth-of-type(2) {
+            background-size: 30%;
+            background-position: 180px 300px;
+          }
+          &:nth-of-type(3) {
+            background-size: 30%;
+            background-position: 180px 200px;
+          }
+          &:nth-of-type(4) {
+            background-size: 25%;
+            background-position: 180px 300px;
+          }
+          &:nth-of-type(5) {
+            background-size: 35%;
+            background-position: 180px 300px;
+          }
+        }
+      }
     }
 
     .mn_pagination {
@@ -207,6 +267,11 @@ section.main {
       justify-content: space-between;
       width: 100px;
       height: 13px;
+
+      @media #{$mobile} {
+        left: calc(50% - 5%);
+        bottom: 30px;
+      }
       li {
         a {
           display: block;
@@ -222,6 +287,19 @@ section.main {
         &.on > a {
           background-color: #ffc98c;
         }
+
+        @media #{$mobile} {
+          a {
+            border: 2px solid #00a2b8;
+          }
+        }
+      }
+
+      @media #{$mobile} {
+        li:hover > a,
+        li.on > a {
+          background-color: #00a2b8;
+        }
       }
     }
 
@@ -230,10 +308,22 @@ section.main {
       top: calc(50% - 180px);
       left: calc(50% - 400px);
 
+      @media #{$mobile} {
+        position: initial;
+        width: 100%;
+      }
+
       h2 {
         color: #fff;
         font-size: 6.5rem;
         font-weight: 200;
+
+        @media #{$mobile} {
+          width: 50%;
+          margin: 50px auto 0;
+          font-size: 4rem;
+          text-align: center;
+        }
 
         span {
           font-weight: 800;
@@ -250,6 +340,10 @@ section.main {
           background-image: url(./../images/withland_logo_w.svg);
           background-size: contain;
           background-repeat: no-repeat;
+
+          @media #{$mobile} {
+            margin: 30px auto 0;
+          }
         }
       }
     }
@@ -263,6 +357,13 @@ section.service {
     width: 1200px;
     height: 350px;
     margin: 130px auto;
+
+    @media #{$mobile} {
+      flex-wrap: wrap;
+      width: 95%;
+      height: 700px;
+      margin: 20px auto;
+    }
 
     &:hover {
       .sv_title {
@@ -312,6 +413,25 @@ section.service {
       p {
         font-size: 1.2rem;
         line-height: 20px;
+      }
+
+      @media #{$mobile} {
+        width: 270px;
+        height: 280px;
+        margin: 20px auto;
+
+        h4 {
+          margin-top: 0;
+        }
+        h2 {
+          margin-top: 10px;
+        }
+        span.line {
+          margin: 30px 0 10px;
+        }
+        p {
+          line-height: 17px;
+        }
       }
     }
 
@@ -404,7 +524,6 @@ section.logos {
   width: 100vw;
   height: 100px;
   background-color: #ffc98c;
-  // box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 
   .lg_container {
     overflow: hidden;
@@ -485,12 +604,35 @@ section.with {
   margin: 0 auto;
   height: 580px;
 
+  @media #{$mobile} {
+    display: block;
+    width: 100%;
+    height: 800px;
+    .wt_container {
+      width: 100vw;
+      h3 {
+        text-align: center;
+      }
+
+      .wt_slide {
+        width: calc(100% / 3);
+
+        li {
+          width: 33.3%;
+        }
+      }
+    }
+  }
+
   .wt_container {
     width: 850px;
     height: 400px;
     margin-top: 120px;
     border-top: 2px solid #00a2b8;
     border-bottom: 2px solid #00a2b8;
+    @media #{$mobile} {
+      width: 100%;
+    }
 
     h3 {
       color: #00a2b8;
@@ -505,6 +647,10 @@ section.with {
       width: calc(283.3px * 3);
       height: 350px;
       margin: 0 auto;
+
+      @media #{$mobile} {
+        width: 100%;
+      }
       li {
         overflow: hidden;
         position: relative;
@@ -512,6 +658,10 @@ section.with {
         height: 350px;
 
         transition: 0.6s;
+
+        @media #{$mobile} {
+          width: calc(100% / 3);
+        }
 
         &:hover {
           width: 600px;
@@ -556,6 +706,9 @@ section.with {
             color: #fff;
             font-size: 1.8rem;
             font-weight: 800;
+            @media #{$mobile} {
+              text-align: left;
+            }
           }
           p {
             color: #fff;
@@ -584,12 +737,18 @@ section.with {
     // background-color: #222;
     border-top: 2px solid #00a2b8;
     border-bottom: 2px solid #00a2b8;
+    @media #{$mobile} {
+      margin-left: 40px;
+    }
 
     h3 {
       color: #00a2b8;
       font-size: 1.2rem;
       line-height: 25px;
       margin-bottom: 10px;
+      @media #{$mobile} {
+        text-align: center;
+      }
     }
 
     a {
@@ -608,11 +767,17 @@ section.with {
     h4 {
       font-size: 1.5rem;
       margin: 10px 0 5px;
+      @media #{$mobile} {
+        text-align: center;
+      }
     }
     p {
       color: #555;
       font-size: 1rem;
       line-height: 20px;
+      @media #{$mobile} {
+        text-align: center;
+      }
     }
   }
 }
@@ -623,10 +788,21 @@ section.withzine {
   width: 1200px;
   height: 500px;
   margin: 0 auto;
+  @media #{$mobile} {
+    position: relative;
+    width: 100%;
+  }
+
   .beauty {
     width: 300px;
     height: 400px;
     border: 1px solid #555;
+
+    @media #{$mobile} {
+      position: relative;
+      top: -275px;
+      left: 370px;
+    }
 
     h3 {
       width: 250px;
@@ -693,11 +869,21 @@ section.withzine {
     background-repeat: no-repeat;
     box-sizing: border-box;
 
+    @media #{$mobile} {
+      position: absolute;
+      top: 250px;
+      width: 100%;
+    }
+
     h3 {
       padding-top: 10px;
       color: #00a2b8;
       font-size: 1.2rem;
       line-height: 25px;
+
+      @media #{$mobile} {
+        text-indent: 20px;
+      }
     }
     // 분양뉴스
     a.newsbtn {
@@ -782,8 +968,25 @@ section.withzine {
       border-bottom: 2px solid #00a2b8;
       box-sizing: border-box;
 
+      @media #{$mobile} {
+        width: 100%;
+      }
+
       ul {
         width: 15%;
+
+        @media #{$mobile} {
+          position: absolute;
+          top: 0;
+          left: 130px;
+          display: flex;
+          justify-content: space-between;
+          width: 60%;
+
+          li > a {
+            text-align: center;
+          }
+        }
         li {
           width: 100%;
           height: 40px;
@@ -810,6 +1013,11 @@ section.withzine {
         width: 80%;
         background-color: rgba(255, 255, 255, 0.5);
         border: 1px solid #000;
+
+        @media #{$mobile} {
+          width: 100%;
+          border: none;
+        }
 
         li {
           display: none;
@@ -856,6 +1064,10 @@ section.withzine {
             font-size: 3.2rem;
             line-height: 40px;
             font-weight: 200;
+            @media #{$mobile} {
+              text-indent: 0;
+              text-align-last: left;
+            }
           }
           h4 {
             margin-top: 15px;
@@ -879,6 +1091,10 @@ section.withzine {
 
 footer {
   background-color: #00a2b8;
+
+  @media #{$mobile} {
+    margin-top: 230px;
+  }
 
   .ft_container {
     display: flex;
